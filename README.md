@@ -20,6 +20,9 @@ It retrieves data from webapi service by http get request. For developement purp
 
 Column names have been hard-coded, but can be generalised.
 
+Index.html, main.js, polyfills.js, runtime.js, styles.js, assets has also been copied to the root location so that the [demo](https://ginow.github.io/Angular-CRUD-table/)
+ page works 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
