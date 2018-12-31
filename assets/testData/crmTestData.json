@@ -1,0 +1,245 @@
+{
+  "@odata.context": "https://fellow4.crm8.dynamics.com/api/data/v9.1/$metadata#contacts(fullname,ownerid,emailaddress1,telephone1,statecode,contactid)",
+  "value": [
+      {
+          "@odata.etag": "W/\"1332977\"",
+          "fullname": "Portal Customer",
+          "emailaddress1": "customer@contoso.com",
+          "telephone1": "425-555-5555",
+          "statecode": 0,
+          "contactid": "99db51a2-c34e-e111-bb8d-00155d03a715"
+      },
+      {
+          "@odata.etag": "W/\"1332983\"",
+          "fullname": "System Administrator",
+          "emailaddress1": "admin@contoso.com",
+          "telephone1": "425-555-5555",
+          "statecode": 0,
+          "contactid": "7469fd95-c0bd-4236-90bf-1d1100291df5"
+      },
+      {
+          "@odata.etag": "W/\"1531352\"",
+          "fullname": "Vincent Lauriant",
+          "emailaddress1": "vincent@adatum.com",
+          "telephone1": "012-156-8778",
+          "statecode": 0,
+          "contactid": "465b158c-541c-e511-80d3-3863bb347ba8"
+      },
+      {
+          "@odata.etag": "W/\"1324730\"",
+          "fullname": "Adrian Dumitrascu",
+          "emailaddress1": "Adrian@adventure-works.com",
+          "telephone1": "768-555-0156",
+          "statecode": 0,
+          "contactid": "49a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1529700\"",
+          "fullname": "Cathan Cook",
+          "emailaddress1": "Cathan@alpineskihouse.com",
+          "telephone1": "178-854-4566",
+          "statecode": 0,
+          "contactid": "4ba0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531329\"",
+          "fullname": "Brian LaMee",
+          "emailaddress1": "brian@blueyonderairlines.com",
+          "telephone1": "555-0135",
+          "statecode": 0,
+          "contactid": "4da0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527214\"",
+          "fullname": "Walter Harp",
+          "emailaddress1": "walter@cpandl.com",
+          "telephone1": "407-967-2241",
+          "statecode": 0,
+          "contactid": "4fa0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531331\"",
+          "fullname": "Cat Francis",
+          "emailaddress1": "Cat@cohowinery.com",
+          "telephone1": "123-879-9879",
+          "statecode": 0,
+          "contactid": "51a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1529703\"",
+          "fullname": "Forrest Chand",
+          "emailaddress1": "Forrest@consolidatedmessenger.com",
+          "telephone1": "789-741-8556",
+          "statecode": 0,
+          "contactid": "53a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531332\"",
+          "fullname": "Eva Corets",
+          "emailaddress1": "evacorets@fabrikam.com",
+          "telephone1": "407-967-2222",
+          "statecode": 0,
+          "contactid": "55a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527199\"",
+          "fullname": "Gabriele Cannata",
+          "emailaddress1": "gabriele@fourthcoffee.com",
+          "telephone1": "408-875-4576",
+          "statecode": 0,
+          "contactid": "57a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531336\"",
+          "fullname": "George Sullivan",
+          "emailaddress1": "george@graphicdesigninstitute.com",
+          "telephone1": "178-854-4571",
+          "statecode": 0,
+          "contactid": "59a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527210\"",
+          "fullname": "Tamer Salah",
+          "emailaddress1": "TSalah@humongousinsurance.com",
+          "telephone1": "555-789-8880",
+          "statecode": 0,
+          "contactid": "5ba0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527193\"",
+          "fullname": "Andrew Dixon",
+          "emailaddress1": "andrewr@litware.com",
+          "telephone1": "555-789-8856",
+          "statecode": 0,
+          "contactid": "5da0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531342\"",
+          "fullname": "Patrick Steiner",
+          "emailaddress1": "psteiner@lucernepublishing.com",
+          "telephone1": "408-875-4587",
+          "statecode": 0,
+          "contactid": "5fa0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527209\"",
+          "fullname": "Susan Burk",
+          "emailaddress1": "sueburk@margiestravel.com",
+          "telephone1": "408-875-4592",
+          "statecode": 0,
+          "contactid": "61a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527191\"",
+          "fullname": "Alex Wu",
+          "emailaddress1": "alexw@northwindtraders.com",
+          "telephone1": "555-123-4879",
+          "statecode": 0,
+          "contactid": "63a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531354\"",
+          "fullname": "Yvonne McKay",
+          "emailaddress1": "ymckay@proseware.com",
+          "telephone1": "407-967-2242",
+          "statecode": 0,
+          "contactid": "65a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527197\"",
+          "fullname": "Darren Parker",
+          "emailaddress1": "darren.parker@woodgrovebank.com",
+          "telephone1": "408-875-4573",
+          "statecode": 0,
+          "contactid": "69a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527192\"",
+          "fullname": "Allison Brown",
+          "emailaddress1": "info@thephone-company.com",
+          "telephone1": "1-555-555-5555",
+          "statecode": 0,
+          "contactid": "6da0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1529717\"",
+          "fullname": "Sean Chai",
+          "emailaddress1": "info@wideworldimporters.com",
+          "telephone1": "012-156-8775",
+          "statecode": 0,
+          "contactid": "71a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1529707\"",
+          "fullname": "Humberto Acevedo",
+          "emailaddress1": "info@treyresearch.net",
+          "telephone1": "789-741-8565",
+          "statecode": 0,
+          "contactid": "73a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1529711\"",
+          "fullname": "Luca Argentiero",
+          "emailaddress1": "lucaa@alpineskihouse.com",
+          "telephone1": "407-967-2230",
+          "statecode": 0,
+          "contactid": "b5a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1529714\"",
+          "fullname": "NeKeta Argrow",
+          "emailaddress1": "info@treyresearch.net",
+          "telephone1": "789-456-7917",
+          "statecode": 0,
+          "contactid": "b7a0e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531349\"",
+          "fullname": "Tomasz Bochenek",
+          "emailaddress1": "thomasz@cohowinery.com",
+          "telephone1": "456-698-4581",
+          "statecode": 0,
+          "contactid": "1fa1e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1529713\"",
+          "fullname": "Nana Bule",
+          "emailaddress1": "info@fineartschool.net",
+          "telephone1": "012-156-8770",
+          "statecode": 0,
+          "contactid": "55a1e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527200\"",
+          "fullname": "Greg Chapman",
+          "emailaddress1": "gregc@northwindtraders.com",
+          "telephone1": "123-879-9904",
+          "statecode": 0,
+          "contactid": "9da1e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1527194\"",
+          "fullname": "Can Comertoglu",
+          "emailaddress1": "camco@northwindtraders.com",
+          "telephone1": "012-156-8755",
+          "statecode": 0,
+          "contactid": "c9a1e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531345\"",
+          "fullname": "Robin Counts",
+          "emailaddress1": "robinc@graphicdesigninstitute.com",
+          "telephone1": "123-879-9943",
+          "statecode": 0,
+          "contactid": "d7a1e5b9-88df-e311-b8e5-6c3be5a8b200"
+      },
+      {
+          "@odata.etag": "W/\"1531341\"",
+          "fullname": "Ofer Daliot",
+          "emailaddress1": "Odaliot@fabrikam.com",
+          "telephone1": "407-967-2234",
+          "statecode": 0,
+          "contactid": "eba1e5b9-88df-e311-b8e5-6c3be5a8b200"
+      }
+  ]
+}
