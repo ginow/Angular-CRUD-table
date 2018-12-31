@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Features
 For demo go to [Angular-CRUD-table](https://ginow.github.io/Angular-CRUD-table/)
 
-This was buit with the help of Angular material table.
+This was buit with the help of [Angular Material](https://material.angular.io/).
 
 ### This table is supposed to do the following:
 * Filter
