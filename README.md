@@ -20,6 +20,8 @@ It retrieves data from webapi service by http get request. For developement purp
 
 crm-webapi-service.service.ts is the service created in angular for webapi calls to Microsoft Dynamics 365 environment
 
+Delete option will throw an alert message "Something bad has happened" but that is because service call isn't authorised. Still the selected rows to delete will be deleted in the browser. Refreshing the page will load the deleted data again.
+
 Column names have been hard-coded, but can be generalised.
 
 index.html, main.js, polyfills.js, runtime.js, styles.js, assets has also been copied to the root location so that the [demo](https://ginow.github.io/Angular-CRUD-table/)
