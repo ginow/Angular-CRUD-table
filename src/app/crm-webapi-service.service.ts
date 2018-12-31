@@ -65,6 +65,9 @@ export class CrmWebapiServiceService {
     }
     // fallback for development environment
     console.log("Falling back for development environment.");
+    console.log(window.location.href);
+    if(window.location.href.includes("github"))
+      return "Angular-CRUD-table/assets/testData/crmTestData.json";
     return "/assets/testData/crmTestData.json";
   }
   deleteUrl(entityPluralName, id) {
