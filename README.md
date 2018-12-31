@@ -18,10 +18,12 @@ This was buit with the help of Angular material table.
 ## Notes
 It retrieves data from webapi service by http get request. For developement purpose the data (stored as json) is retrieved locally from the "assets" folder. 
 
+crm-webapi-service.service.ts is the service created in angular for webapi calls to Microsoft Dynamics 365 environment
+
 Column names have been hard-coded, but can be generalised.
 
-Index.html, main.js, polyfills.js, runtime.js, styles.js, assets has also been copied to the root location so that the [demo](https://ginow.github.io/Angular-CRUD-table/)
- page works 
+index.html, main.js, polyfills.js, runtime.js, styles.js, assets has also been copied to the root location so that the [demo](https://ginow.github.io/Angular-CRUD-table/)
+ page works.
 
 ## Development server
 
