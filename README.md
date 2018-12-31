@@ -7,7 +7,7 @@ For demo go to [Angular-CRUD-table](https://ginow.github.io/Angular-CRUD-table/)
 
 This was buit with the help of Angular material table.
 
-###This table is supposed to do the following:
+### This table is supposed to do the following:
 * Filter
 * Sort
 * Edit (currently only first column can be edited)
