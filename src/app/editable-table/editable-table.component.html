@@ -1,0 +1,87 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
+</mat-form-field>
+
+<!--Table related html starts from below-->
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+  <!-- Checkbox Column -->
+  <ng-container matColumnDef="select">
+    <th mat-header-cell *matHeaderCellDef>
+      <mat-checkbox (change)="$event ? masterToggle() : null" [checked]="selection.hasValue() && isAllSelected()"
+        [indeterminate]="selection.hasValue() && !isAllSelected()">
+      </mat-checkbox>
+    </th>
+    <td mat-cell *matCellDef="let row">
+      <mat-checkbox (click)="$event.stopPropagation()" (change)="$event ? selection.toggle(row) : null" [checked]="selection.isSelected(row)">
+      </mat-checkbox>
+    </td>
+  </ng-container>
+  <!-- fullname Column -->
+  <ng-container matColumnDef="fullname">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> fullname </th>
+    <td mat-cell *matCellDef="let row">
+      <ng-container *ngIf="!row.editing">
+        {{row.fullname}}
+      </ng-container>
+      <mat-form-field *ngIf="row.editing">
+        <input matInput  placeholder="{{row.fullname}}" [(ngModel)]="row.editedfullname">
+      </mat-form-field>
+    </td>
+
+  </ng-container>
+
+  <!-- emailaddress1 Column -->
+  <ng-container matColumnDef="emailaddress1">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> emailaddress1 </th>
+    <td mat-cell *matCellDef="let row"> {{row.emailaddress1}} </td>
+  </ng-container>
+
+  <!-- telephone1 Column -->
+  <ng-container matColumnDef="telephone1">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> telephone1 </th>
+    <td mat-cell *matCellDef="let row"> {{row.telephone1}} </td>
+  </ng-container>
+
+  <!-- statecode Column -->
+  <ng-container matColumnDef="statecode">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> statecode </th>
+    <td mat-cell *matCellDef="let row"> {{row.statecode}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="contactid">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> contactid </th>
+    <td mat-cell *matCellDef="let row"> {{row.contactid}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="ownerid">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ownerid </th>
+    <td mat-cell *matCellDef="let row"> {{row.ownerid}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="actionsColumn">
+    <mat-header-cell *matHeaderCellDef>
+      <button mat-icon-button color="accent" (click)="createNew()"> <i class="material-icons">add</i></button>
+    </mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button *ngIf="!row.editing" mat-icon-button color="primary" focusable="false" (click)="startEdit(row)">
+        <i class="material-icons">edit</i>
+      </button>
+      <button *ngIf="row.editing" mat-icon-button color="primary" focusable="false" (click)="saveEdit(row)">
+        <i class="material-icons">check</i>
+      </button>
+      <button *ngIf="row.editing" mat-icon-button color="primary" focusable="false" (click)="cancelOrDelete(row)">
+        <i class="material-icons">cancel</i>
+      </button>
+    </mat-cell>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="selection.toggle(row)">
+  </tr>
+
+</table>
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+<button mat-raised-button color="primary" matBadge={{selection.selected.length}} (click)="fireDelete()"
+  matBadgePosition="after" matBadgeColor="accent">
+  Delete
+</button>
