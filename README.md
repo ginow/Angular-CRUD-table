@@ -3,9 +3,11 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
 ## Features
-For demo go to https://ginow.github.io/Angular-CRUD-table/
+For demo go to [Angular-CRUD-table](https://ginow.github.io/Angular-CRUD-table/)
+
 This was buit with the help of Angular material table.
-This table is supposed to do the following:
+
+###This table is supposed to do the following:
 * Filter
 * Sort
 * Edit (currently only first column can be edited)
