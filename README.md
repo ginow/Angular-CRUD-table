@@ -8,6 +8,7 @@ For demo go to [Angular-CRUD-table](https://ginow.github.io/Angular-CRUD-table/)
 This was buit with the help of [Angular Material](https://material.angular.io/).
 
 ### This table is supposed to do the following:
+* Retrieve data (from a service, web API or a local file)
 * Filter
 * Sort
 * Edit (currently only first column can be edited)
