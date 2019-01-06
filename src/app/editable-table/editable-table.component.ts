@@ -95,7 +95,7 @@ export class EditableTableComponent implements OnInit {
           data => {
             console.log("data deleted:\n" + data);
           },
-          error => alert(error)
+          error => console.log(error)
         )
       }
     );
@@ -135,7 +135,7 @@ export class EditableTableComponent implements OnInit {
       data => {
         console.log("data updated:\n" + data);
       },
-      error => alert(error)
+      error => console.log(error)
     )
   }
   createNew(){
