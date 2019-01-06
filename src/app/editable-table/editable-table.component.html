@@ -24,7 +24,7 @@
         {{row.fullname}}
       </ng-container>
       <mat-form-field *ngIf="row.editing">
-        <input matInput  placeholder="{{row.fullname}}" [(ngModel)]="row.editedfullname">
+        <input matInput placeholder="{{row.fullname}}" [(ngModel)]="row.editedfullname">
       </mat-form-field>
     </td>
 
@@ -33,19 +33,35 @@
   <!-- emailaddress1 Column -->
   <ng-container matColumnDef="emailaddress1">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> emailaddress1 </th>
-    <td mat-cell *matCellDef="let row"> {{row.emailaddress1}} </td>
+    <td mat-cell *matCellDef="let row">
+      <ng-container *ngIf="!row.editing">
+        {{row.emailaddress1}}
+      </ng-container>
+      <mat-form-field *ngIf="row.editing">
+        <input matInput placeholder="{{row.emailaddress1}}" [(ngModel)]="row.editedemailaddress1">
+      </mat-form-field>
+    </td>
   </ng-container>
 
   <!-- telephone1 Column -->
   <ng-container matColumnDef="telephone1">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> telephone1 </th>
-    <td mat-cell *matCellDef="let row"> {{row.telephone1}} </td>
+    <td mat-cell *matCellDef="let row">
+      <ng-container *ngIf="!row.editing">
+        {{row.telephone1}}
+      </ng-container>
+      <mat-form-field *ngIf="row.editing">
+        <input matInput placeholder="{{row.telephone1}}" [(ngModel)]="row.editedtelephone1">
+      </mat-form-field>
+    </td>
   </ng-container>
 
   <!-- statecode Column -->
   <ng-container matColumnDef="statecode">
     <th mat-header-cell *matHeaderCellDef mat-sort-header> statecode </th>
-    <td mat-cell *matCellDef="let row"> {{row.statecode}} </td>
+    <td mat-cell *matCellDef="let row">  
+        {{row.statecode}}      
+    </td>
   </ng-container>
 
   <ng-container matColumnDef="contactid">

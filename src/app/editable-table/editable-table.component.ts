@@ -1,16 +1,10 @@
-
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort, MatTableDataSource, MatPaginator } from '@angular/material';
 import { SelectionModel } from '@angular/cdk/collections';
 import { CrmWebapiServiceService, IContactRecord } from '../crm-webapi-service.service';
 
-
 const initialSelection = [];
 const allowMultiSelect = true;
-
-/**
- * @title Basic use of `<table mat-table>`
- */
 
 @Component({
   selector: 'app-editable-table',
@@ -21,14 +15,10 @@ export class EditableTableComponent implements OnInit {
   displayedColumns: string[] = ['select', 'fullname', 'emailaddress1', 'telephone1', 'statecode', 'actionsColumn'];
 
   dataSource = null;
-  //selection = new SelectionModel<PeriodicElement>(allowMultiSelect, initialSelection);
   selection = new SelectionModel<IContactRecord>(allowMultiSelect, initialSelection);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
-
-  //Not working will need to look later
-  //@ViewChild(MatTable) myMatTable: MatTable<PeriodicElement>
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -42,7 +32,6 @@ export class EditableTableComponent implements OnInit {
     this._crmwebapiservice.getContacts().subscribe(
       data => {
         console.log("data retrieved:\n" + data);
-        //this.dataSource = new MatTableDataSource<PeriodicElement>(data);
         this.dataSource = new MatTableDataSource<IContactRecord>(data.value);
         this.dataSource.sort = this.sort;
         this.dataSource.paginator = this.paginator;
@@ -50,16 +39,14 @@ export class EditableTableComponent implements OnInit {
         // Show edit button for row during page load
         this.dataSource.data.forEach(row => row.editing = false);
       },
-      error => alert(error));
+      error => console.log(error));
 
     /*
-    console.log("url: " + this.getClientUrl() + "\nwindow location href: " + window.location.href);
-    console.log(window.location.host);
-    this.getCRMdata();
+    this.createCRMdata();
     */
   }
 
-  getCRMdata() {
+  createCRMdata() {
     var req = new XMLHttpRequest()
     req.open("POST", encodeURI("https://fellow4.crm8.dynamics.com" + "/api/data/v9.1/accounts"), true);
     req.setRequestHeader("Accept", "application/json");
@@ -128,12 +115,44 @@ export class EditableTableComponent implements OnInit {
     row.editing = true;
   }
   cancelOrDelete(row) {
+    //since the editing has finished change icon from "Check" and "Cancel" to "Edit"
     row.editing = false;
   }
   saveEdit(row) {
     debugger
+    // overwrite the data with new from the user inputs
     row.fullname = row.editedfullname;
-    console.log(row.editedfullname);
+    row.emailaddress1=row.editedemailaddress1;
+    row.telephone1=row.editedtelephone1;
+
+    // Clear the temporary variables
+    row.editedfullname="";
+    row.editedemailaddress1="";
+    row.editedtelephone1="";
+    //since the editing has finished change icon from "Check" and "Cancel" to "Edit"
     row.editing = false;
+    this._crmwebapiservice.updateContacts("contacts", row).subscribe(
+      data => {
+        console.log("data updated:\n" + data);
+      },
+      error => alert(error)
+    )
+  }
+  createNew(){
+    debugger
+    // Set empty values
+    this.dataSource.data.push({"fullname": "",
+    "emailaddress1": "",
+    "telephone1": ""});
+
+    // Sort the table by 'fullname' so that newly created blank data comes at the top
+    this.sort.active = 'fullname'; // Use a column which can't be empty (i.e. which is mandatory) for sorting otherwise you'll get bizarre results
+    this.sort.direction = 'asc';
+    this.sort.sortChange.emit(); // Fire the event which is otherwise done by mouseclick
+    this.dataSource.sort=this.sort;
+    this.paginator.firstPage(); // Go to first page 
+    this.applyFilter(""); // Clear filters if any
+    //Enable the editing of the newly added row (which is pushed as last row in the datasource);
+    this.dataSource.data[this.dataSource.data.length-1].editing=true;   
   }
 }
