@@ -8,12 +8,12 @@ For demo go to [Angular-CRUD-table](https://ginow.github.io/Angular-CRUD-table/)
 This was buit with the help of [Angular Material](https://material.angular.io/).
 
 ### This table is supposed to do the following:
-* Retrieve data (from a service, web API or a local file)
+* Retrieve
+* Create 
+* Update
+* Delete
 * Filter
 * Sort
-* Edit (currently only first column can be edited)
-* Create (feature under development)
-* Delete
 * Pagination
 
 ## Notes
@@ -21,7 +21,7 @@ It retrieves data from webapi service by http get request. For developement purp
 
 crm-webapi-service.service.ts is the service created in angular for webapi calls to Microsoft Dynamics 365 environment
 
-Delete option will throw an alert message "Something bad has happened" but that is because service call isn't authorised. Still the selected rows to delete will be deleted in the browser. Refreshing the page will load the deleted data again.
+Delete, Update, Create option will throw a console log message "Something bad has happened" but that is because service call isn't authorised. Still the selected rows to delete will be deleted in the browser. Refreshing the page will load the deleted data again.
 
 Column names have been hard-coded, but can be generalised.
 
