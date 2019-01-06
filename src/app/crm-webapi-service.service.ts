@@ -22,7 +22,7 @@ export interface IContactRecord {
   ownerid: string;
 }
 
-const httpOptions = {
+var httpOptions = {
   headers: new HttpHeaders({
     "Content-Type": "application/json",
     "OData-MaxVersion": "4.0",
@@ -50,7 +50,20 @@ export class CrmWebapiServiceService {
     console.log("Inside deleteContacts()");
     this._url = this.deleteUrl(entityPluralName, id);
     console.log("delete url: " + this._url);
-    return this.http.delete(this._url,httpOptions).pipe(
+    return this.http.delete(this._url, httpOptions).pipe(
+      retry(3),
+      catchError(this.handleError)
+    );
+  }
+  updateContacts(entityPluralName: string, row: any): Observable<{}> {
+    console.log("Inside updateContacts()");
+    // Delete url will also work here for update url since both are same. Difference is in request body
+    this._url = this.deleteUrl(entityPluralName, row.contactid);
+    console.log("update url: " + this._url);
+
+    return this.http.patch(this._url, httpOptions.headers.append(
+      "fullname", row.fullname
+    )).pipe(
       retry(3),
       catchError(this.handleError)
     );
@@ -66,9 +79,7 @@ export class CrmWebapiServiceService {
     // fallback for development environment
     console.log("Falling back for development environment.");
     console.log(window.location.href);
-    if(window.location.href.includes("github"))
-      return "Angular-CRUD-table/assets/testData/crmTestData.json";
-    return "/assets/testData/crmTestData.json";
+    return window.location.href + "/assets/testData/crmTestData.json";
   }
   deleteUrl(entityPluralName, id) {
     if (window.parent != null && window.parent['Xrm'] != null) {
