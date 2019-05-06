@@ -27,6 +27,10 @@ Column names have been hard-coded, but can be generalised.
 
 index.html, main.js, polyfills.js, runtime.js, styles.js, assets has also been copied to the root location so that the [demo](https://ginow.github.io/Angular-CRUD-table/)
  page works.
+ 
+Before publishing the index.html webresource in crm system the below base href location needs to be changed to your organisations url
+<base href="https://i20elite.crm8.dynamics.com//WebResources/"> 
+Also each of the js files should be prefixed with the publisher's style, eg. "main.js" as "new_main.js"
 
 ## Development server
 
