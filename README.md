@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Features
 For demo go to [Angular-CRUD-table](https://ginow.github.io/Angular-CRUD-table/)
 
+For youtube video tutorial to integrate with D365 form go to [Integrating an editable Angular grid on D365 form](https://youtu.be/WYT3nDBcwpg)
+
 This was buit with the help of [Angular Material](https://material.angular.io/).
 
 ### This table is supposed to do the following:
